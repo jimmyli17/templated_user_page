@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-    body {
+body {
 	font-family: Helvetica;
 }
 
@@ -28,11 +28,7 @@ container:nth-of-type(1) {
 	padding-bottom: 24px;
 }
 
-page-header{
+.page-header{
 	padding-bottom:17px;margin:18px 0;
 	border: white 2px solid;
-}
-
-progress-bar{
-	background-color: green;
 }
