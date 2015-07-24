@@ -4,6 +4,19 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   def show
     @scientist = Scientist.find_by_id(params['id'])
-    render 'show'
+  end
+  def new
+  end
+  def create
+    s = Scientist.new
+    s.caption = params['caption']
+    s.photo = params['photo']
+    s.name = params['name']
+    s.year = params['year']
+    s.description = params['description']
+    s.location = params['location']
+    s.value = params['value']
+    s.save;
+    redirect_to "/templated_user_page/#{s.id}"
   end
 end
