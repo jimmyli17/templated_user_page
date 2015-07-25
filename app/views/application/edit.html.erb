@@ -1,0 +1,19 @@
+<div class = "container">
+  <div class = "row">
+    <div class = "col-md-3">
+      <h2>Edit Scientist</h2>
+      <form action="/update_scientist/<%=@scientist.id%>">
+        <div class="input-group">
+          <input type="text" class="form-control" name="caption" placeholder="caption" value="<%=@scientist.caption%>" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" name="photo" placeholder="photo" value="<%=@scientist.photo%>" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" name="name" placeholder="name" value="<%=@scientist.name%>" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" name="year" placeholder="year" value="<%=@scientist.year%>" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" name="description" placeholder="description" value="<%=@scientist.description%>" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" name="location" placeholder="location" value="<%=@scientist.location%>" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" name="value" placeholder="value" value="<%=@scientist.value%>" aria-describedby="basic-addon1">
+          <input type = "submit" class="form-control" aria-describedby="basic-addon1">
+        </div>  
+      </form>
+    </div>
+  </div>
+</div>
