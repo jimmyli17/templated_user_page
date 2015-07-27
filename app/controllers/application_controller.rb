@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     s.description = params['description']
     s.location = params['location']
     s.value = params['value']
-    s.save;
+    s.save
     redirect_to "/templated_user_page/#{s.id}"
   end
   
@@ -37,5 +37,10 @@ class ApplicationController < ActionController::Base
     s.value = params['value']
     s.save
     redirect_to "/templated_user_page/#{s.id}"
+  end
+  
+  def delete
+    s = Scientist.find_by_id(params['id'])
+    s.destroy
   end
 end

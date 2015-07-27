@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/create_scientist' => 'application#create'
   get '/templated_user_page/:id/edit' => 'application#edit'
   get '/update_scientist/:id' => 'application#update'
+  get '/templated_user_page/:id/delete' => 'application#delete'
 end
