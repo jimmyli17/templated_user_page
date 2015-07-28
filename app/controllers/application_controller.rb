@@ -43,4 +43,9 @@ class ApplicationController < ActionController::Base
     s = Scientist.find_by_id(params['id'])
     s.destroy
   end
+  
+  def index
+    @scientists = Scientist.all
+    
+  end
 end

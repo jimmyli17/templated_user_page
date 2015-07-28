@@ -1,0 +1,33 @@
+<% @scientists.each do |scientist|%>
+
+<div class = "container">
+  <div class="row">
+    <div class="col-sm-3">
+      <a href="#" class="thumbnail">
+        <img data-src="holder.js/100%x300" alt="<%scientist.caption%>" src="<%=scientist.photo%>" data-holder-rendered="true" style="height:260px; width:300px; display: inline;">
+      </a>
+    </div>
+    <div class="col-sm-8">
+        <h1><%=scientist.name%>   <h5>Member since <%=scientist.year%></h5></h1>
+        <p><%=scientist.description%></p>
+        <p class="bold"><b>Location:</b> <%=scientist.location%><p>
+        <p><b>Completion:</b><p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%=scientist.value%>" aria-valuemin="0" aria-valuemax="100" style="width: <%=scientist.value%>%;">
+          <%=scientist.value%>%
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row" align="center">
+      <a href = "/templated_user_page/<%scientist.id%>/edit">edit</a> | 
+      <a href = "/templated_user_page/<%scientist.id%>/delete">delete</a>
+      <br>
+      <br>
+  </div>
+</div>
+
+<% end %>
